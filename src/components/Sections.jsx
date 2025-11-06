@@ -5,36 +5,38 @@ export default function Sections() {
     {
       title: 'Signature Destinations',
       icon: MapPin,
-      desc: 'From the azure coves of the Mediterranean to the pristine isles of the Caribbean, choose from handpicked routes designed for wonder.'
+      desc: 'Mediterranean azure, Caribbean pearls, and secret archipelagos. Our curators trace routes of cinematic beauty and calm seas.'
     },
     {
       title: 'Curated Experiences',
       icon: Compass,
-      desc: 'Chef-crafted dining, diving with certified guides, sunset sails, and secluded beach picnics—crafted to your tastes.'
+      desc: 'Private chefs, PADI-certified dives, rosé at golden hour, and barefoot beach suppers—meticulously arranged to your taste.'
     },
     {
-      title: 'Luxury Fleet',
+      title: 'Modern Luxury Fleet',
       icon: Ship,
-      desc: 'A modern collection of yachts and catamarans with spacious decks, elegant cabins, and best-in-class safety.'
+      desc: 'Performance yachts and serene catamarans with refined interiors, stabilizers, and intuitive tech for effortless days onboard.'
     }
   ]
 
   return (
-    <section id="experiences" className="py-24 bg-white">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <section id="experiences" className="relative py-28">
+      <div className="absolute inset-0 z-0 bg-[radial-gradient(60%_50%_at_50%_0%,rgba(16,185,129,0.15),rgba(2,6,23,0))]" />
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-2xl">
-          <h2 className="text-3xl sm:text-4xl font-bold text-slate-900">Crafted for the modern voyager</h2>
-          <p className="mt-3 text-slate-600">Every journey is bespoke—planned with precision and delivered with warmth.</p>
+          <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white">Crafted for the modern voyager</h2>
+          <p className="mt-3 text-slate-300">Every journey is bespoke—planned with precision and delivered with warmth.</p>
         </div>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map(({ title, icon: Icon, desc }) => (
-            <div key={title} className="rounded-2xl border border-slate-200 p-6 hover:shadow-lg transition">
-              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600">
+            <div key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-slate-900/40 backdrop-blur p-6 transition hover:border-emerald-400/30">
+              <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-emerald-500/10 blur-2xl transition group-hover:scale-110" />
+              <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/15 text-emerald-300 ring-1 ring-emerald-400/20">
                 <Icon className="h-6 w-6" />
               </div>
-              <h3 className="mt-4 text-lg font-semibold text-slate-900">{title}</h3>
-              <p className="mt-2 text-slate-600 text-sm leading-6">{desc}</p>
+              <h3 className="mt-4 text-lg font-semibold text-white">{title}</h3>
+              <p className="mt-2 text-slate-300/90 text-sm leading-6">{desc}</p>
             </div>
           ))}
         </div>
